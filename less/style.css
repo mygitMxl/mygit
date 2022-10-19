@@ -1,0 +1,56 @@
+/*会出现在.less、.css文件中的注释*/
+.border_1 {
+  border: 1px solid ;
+}
+.margin_2 {
+  margin: 30px auto;
+}
+.div {
+  background: #ff0;
+  width: 200px;
+  height: 200px;
+  border: 1px solid ;
+  margin: 30px auto;
+  font-size: 20px;
+  color: red;
+  border-bottom: 4px solid;
+  box-shadow: 7px 7px 10px red;
+}
+.sanjiao {
+  width: 0;
+  height: 0px;
+  color: #090;
+  overflow: hidden;
+  border-width: 20px;
+  border-color: transparent transparent #090 transparent;
+  border-style: dashed  dashed  dashed solid;
+}
+.right {
+  width: 200px;
+  height: 200px;
+  border: 1px solid ;
+  position: absolute;
+  top: 30px;
+  right: 0px;
+  box-shadow: -10px 10px 10px green;
+}
+.navbar {
+  width: 600px;
+  margin: 200px auto;
+}
+.navbar ul {
+  overflow: hidden;
+  background-color: #090;
+}
+.navbar ul li {
+  float: left;
+  list-style: none;
+  border: 1px solid;
+}
+.navbar ul li a {
+  text-decoration: none;
+}
+.navbar ul li a:hover {
+  color: #f00;
+  cursor: pointer;
+}

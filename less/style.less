@@ -1,0 +1,105 @@
+
+//只会出现在.less文件中的注释
+/*会出现在.less、.css文件中的注释*/
+@value:200px;//创建一个变量并赋值
+.border_1{
+border: 1px solid ;
+}
+.margin_2{
+    margin: 30px auto;
+}
+.style(@size,@color,){
+   font-size: @size;
+   color: @color;
+}
+.style_01(@box: 4px solid ){
+border-bottom: @box;
+
+}
+.style_02(@shandow:7px 7px 10px red){
+    box-shadow:@shandow ;
+}
+.posit(@top:30px,@right:0px){
+    position: absolute;
+    top:@top;
+    right:@right
+
+}
+.bxos(@x:-10px,@y:10px,@z:10px,@color:green){
+box-shadow:@arguments;
+}
+//......................................
+//匹配模式
+.triangel(right,@width:10px,@color:#f00){
+    width:0;
+      height: 0px;
+      color:@color;
+      overflow: hidden;
+      border-width: @width;
+      border-color: transparent  transparent  transparent @color;
+      border-style: dashed  dashed  dashed solid;
+  }
+  .triangel(top,@width:10px,@color:#f00){
+      width:0;
+      height: 0px;
+      color:@color;
+      overflow: hidden;
+      border-width: @width;
+      border-color: @color  transparent  transparent transparent;
+      border-style: dashed  dashed  dashed solid;
+  }
+  .triangel(bottom,@width:10px,@color:#f00){
+    width:0;
+    height: 0px;
+    color:@color;
+    overflow: hidden;
+    border-width: @width;
+    border-color: transparent  transparent  @color transparent;
+    border-style: dashed  dashed  dashed solid;
+}
+//。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。
+
+//。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。
+.div{
+    background:#ff0;
+    width:@value;//使用变量
+    height:@value;//使用变量
+    .border_1;
+    .margin_2;
+    .style(20px,red);
+    .style_01;
+    .style_02
+}
+.sanjiao{
+    .triangel(bottom,20px,#090);
+    
+}
+.right{
+width:@value;
+height:@value;
+.border_1;
+.posit;
+.bxos
+}
+
+//嵌套模式
+.navbar{
+    width: 600px;
+    margin: 200px auto;
+    ul{
+        overflow: hidden;
+        background-color: #090;
+        li{
+            float: left;
+            list-style: none;
+            border: 1px solid;
+            a{
+             text-decoration: none;
+             &:hover{
+                color: #f00;
+                cursor: pointer;
+             }
+            }
+        }
+    }
+}
